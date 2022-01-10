@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %} 
+
+<h4>Are You Sure?</h4>
+<br>
+<p>Are you sure you want to delete <strong>"{{algorithm}}"?</strong></p>
+<br>
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit" name="confirm" action="deletealgo/{{ data.id }}">Yes, I'm Sure</button>
+    <a href="/viewalgo">Cancel</a>
+</form>
+
+{% endblock content %}

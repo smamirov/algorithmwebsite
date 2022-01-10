@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %} 
+<div class="container">
+    {% load crispy_forms_tags %}
+    <form method='POST'> {% csrf_token %}
+        {{form|crispy}}
+        </br>
+        <div class="form-group">
+            <button class="btn btn-outline-secondary" type="submit" value="Save">Save</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

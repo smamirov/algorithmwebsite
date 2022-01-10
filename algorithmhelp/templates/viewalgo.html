@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+<title>Update</title>
+<h4>Algorithms</h4>
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+<!--
+<div class='input-group'>
+    <div class="form-outline">
+        <input class="form-control" id="searchbar" onkeyup="search_algo()" type="text"
+            name="search" placeholder="Search Algorithms...", autocomplete="off">
+    </div>
+</div>
+-->
+<!--Searchbar-->
+<div id="divfortable">
+    <div class='input-group'>
+        <div class="form-outline">
+            <input class="form-control" id="tableSearch" type="text"
+            placeholder="Search Table" autocomplete="off">
+        </div>
+    </div>
+</div>
+<br>
+<div id="table table-hover">
+    <table id="myTable" class="table">
+        <tr>
+            <th class="table-primary">Algorithm</th>
+            <th class="table-primary">View</th>
+            <th class="table-primary">Update</th>
+            <th class="table-primary">Delete</th>
+        </tr>
+        {% for data in all %}
+        <tbody id="searchTable">
+            <tr>
+                <td>{{data.name}}</td>
+                <td>
+                    <a href="displayalgo/{{ data.id }}" rel="noopener noreferrer" style="text-decoration: none">
+                        <button class="btn btn-info" method="GET">View</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="changealgo/{{ data.id }}" rel="noopener noreferrer" style="text-decoration: none">
+                        <button class="btn btn-primary" method="GET">Update</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="deletealgo/{{ data.id }}" rel="noopener noreferrer" style="text-decoration: none">
+                        <button class="btn btn-danger" method="GET">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+
+<!--Function to filter the table based on the search-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("#tableSearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#searchTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+{% endblock content %}
+
+<!--
+<ul>
+    <li class="algorithms">
+        {{data.name}}
+        <a href="displayalgo/{{ data.id }}" rel="noopener noreferrer" style="text-decoration: none">
+            <button class="btn btn-primary" method="GET">View</button>
+        </a>
+        <a href="changealgo/{{ data.id }}" rel="noopener noreferrer" style="text-decoration: none">
+            <button class="btn btn-secondary" method="GET">Update</button>
+        </a>
+    </li>
+</ul>
+-->
+
+

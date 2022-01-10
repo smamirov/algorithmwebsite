@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>
+    <strong>{{specificData.name}}</strong>
+</h3>
+<h5>Time Complexity: {{specificData.timeComplexity}}</h5>
+<h5>Space Complexity: {{specificData.spaceComplexity}}</h5>
+<br>
+<h6><strong>Description:</strong></h6>
+{{specificData.description}}
+<br>
+<br>
+<h6><strong>Applications:</strong></h6>
+{{specificData.applications}}
+<br>
+<br>
+<h6><strong>Python Implementation:</strong></h6>
+<div class="codeblock">
+    <pre>
+    <code>
+{{specificData.implementation}}
+    </code>
+    </pre>
+</div>
+<br>
+<br>
+<h6><strong>Output:</strong></h6>
+<div class="codeblock">
+    <pre>
+    <code>
+{{specificData.output}}
+    </code>
+    </pre>
+</div>
+{% endblock content %}

@@ -1,0 +1,134 @@
+body {
+    background: #d6d6d6;
+    color: #535353;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h4, h5, h6 {
+    color: #000000;
+    font-family: "Courier New";
+  }
+  h3 {
+    color: #000000;
+    font-family: "Courier New";
+  }
+
+  #h3color {
+    color: #000000;
+  }
+
+  ul {
+    margin: 0;
+  }
+  
+  .bg-steel {
+    background-color: #d6d6d6;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+    font-family: "Courier New";
+    font-weight: 900;
+    
+  }
+
+  
+  .a {
+    font-family: "Courier New";
+    font-weight: 900;
+  }
+  .list-inline {
+    list-style: none;
+    padding: 0;
+  }
+
+  .list-inline > li {
+      display: inline;
+  }
+
+  .list-pipe > li:not(:last-child)::after {
+    content: "|";
+    margin: 0 .25em;
+  }
+
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #d6d6d6;
+    padding: 10px 20px;
+    border: 1px solid #030303;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  .codeblock {
+    background: #d6d6d6;
+    width: 45%;
+    padding-left: 20px 10px;
+    border: 1px solid #030303;
+  }
+  
+  .expired {
+    color:#030303;
+    position: fixed;
+    left: 1120px;
+    top: 180px;
+  }
+
+
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #53575a;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+
+  .custom {
+    width: 185px;
+  }
